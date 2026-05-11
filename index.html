@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indie Store</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#121212;
+            color:white;
+        }
+
+        header{
+            background:linear-gradient(90deg,#6a11cb,#2575fc);
+            padding:25px;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        header p{
+            font-size:18px;
+        }
+
+        .contenedor{
+            display:flex;
+            min-height:100vh;
+        }
+
+        aside{
+            width:25%;
+            background:#1f1f1f;
+            padding:20px;
+        }
+
+        aside h2{
+            margin-bottom:15px;
+            color:#00d9ff;
+        }
+
+        aside ul{
+            list-style:none;
+        }
+
+        aside ul li{
+            margin:15px 0;
+        }
+
+        aside ul li a{
+            text-decoration:none;
+            color:white;
+            transition:0.3s;
+        }
+
+        aside ul li a:hover{
+            color:#00d9ff;
+        }
+
+        main{
+            width:75%;
+            padding:25px;
+        }
+
+        .juego{
+            background:#1c1c1c;
+            margin-bottom:25px;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 0 10px rgba(0,0,0,0.5);
+            transition:0.3s;
+        }
+
+        .juego:hover{
+            transform:scale(1.02);
+        }
+
+        .juego img{
+            width:100%;
+            height:300px;
+            object-fit:cover;
+        }
+
+        .contenido{
+            padding:20px;
+        }
+
+        .contenido h2{
+            color:#00d9ff;
+            margin-bottom:10px;
+        }
+
+        .contenido p{
+            line-height:1.6;
+        }
+
+        footer{
+            background:#0d0d0d;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        @media(max-width:900px){
+            .contenedor{
+                flex-direction:column;
+            }
+
+            aside, main{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <h1>Indie Store</h1>
+        <p>Descubre algunos de los mejores videojuegos independientes</p>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="contenedor">
+
+        <!-- BARRA LATERAL -->
+        <aside>
+            <h2>Categorías</h2>
+
+            <ul>
+                <li><a href="#hollow">Hollow Knight</a></li>
+                <li><a href="#celeste">Celeste</a></li>
+                <li><a href="#stardew">Stardew Valley</a></li>
+                <li><a href="#undertale">Undertale</a></li>
+                <li><a href="#shovelknight">Shovel Knight</a></li>
+            </ul>
+
+            <h2 style="margin-top:30px;">Sobre la página</h2>
+            <p>
+                Esta web está dedicada a los videojuegos indie más populares,
+                destacando su creatividad, arte y jugabilidad.
+            </p>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+
+            <!-- JUEGO 1 -->
+            <section class="juego" id="hollow">
+                <img src="imagenes/Hollow Knight.jpeg" alt="Hollow Knight">
+
+                <div class="contenido">
+                    <h2>Hollow Knight</h2>
+
+                    <p>
+                        Un increíble metroidvania desarrollado por Team Cherry.
+                        Explora el reino de Hallownest, lleno de secretos, enemigos
+                        desafiantes y una atmósfera oscura y fascinante.
+                    </p>
+                </div>
+            </section>
+
+            <!-- JUEGO 2 -->
+            <section class="juego" id="celeste">
+                <img src="imagenes/Celeste.jpeg" alt="Celeste">
+
+                <div class="contenido">
+                    <h2>Celeste</h2>
+
+                    <p>
+                        Un juego de plataformas desafiante y emocional donde
+                        acompañas a Madeline en su ascenso a la montaña Celeste.
+                        Destaca por su narrativa inspiradora y su excelente música.
+                    </p>
+                </div>
+            </section>
+
+            <!-- JUEGO 3 -->
+            <section class="juego" id="stardew">
+                <img src="imagenes/Stardew Valley.jpeg" alt="Stardew Valley">
+
+                <div class="contenido">
+                    <h2>Stardew Valley</h2>
+
+                    <p>
+                        Un relajante simulador de granja donde puedes cultivar,
+                        pescar, explorar cuevas y construir relaciones con los
+                        habitantes del pueblo.
+                    </p>
+                </div>
+            </section>
+
+            <!-- JUEGO 4 -->
+            <section class="juego" id="undertale">
+                <img src="imagenes/Undertale.jpeg" alt="Undertale">
+
+                <div class="contenido">
+                    <h2>Undertale</h2>
+
+                    <p>
+                        Un RPG único donde las decisiones del jugador afectan
+                        completamente la historia. Puedes derrotar enemigos o
+                        resolver conflictos de forma pacífica.
+                    </p>
+                </div>
+            </section>
+
+            <!-- JUEGO 5 -->
+            <section class="juego" id="shovelknight">
+                <img src="imagenes/Shovel Knight.jpeg" alt="Shovel Knight">
+
+                <div class="contenido">
+                    <h2>Shovel Knight</h2>
+
+                    <p>
+                        Un juego de plataformas retro inspirado en los clásicos de 8 bits.
+                        Controla a un caballero armado con una pala mientras enfrentas
+                        enemigos, exploras castillos y rescatas a Shield Knight.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <h3>INFORMACION SOBRE NOSOTROS</h3>
+
+        <p><a href="C:\Users\neder\Desktop\Visual Studio Code Practicas\presentacion.html">Visita nuestra pagina de Presentacion</a></p>
+        <p><a href="C:\Users\neder\Desktop\Visual Studio Code Practicas\quienessomos.html">Visita nuestra pagina de Informacion</a></p>
+        <p><a href="C:\Users\neder\Desktop\Visual Studio Code Practicas\contactos.html">Visita nuestra pagina de Contactos</a></p>
+    </footer>
+
+</body>
+</html>
